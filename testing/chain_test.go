@@ -3,8 +3,8 @@ package ibctesting_test
 import (
 	"testing"
 
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 	"github.com/stretchr/testify/require"
-	tmtypes "github.com/tendermint/tendermint/types"
 
 	ibctesting "github.com/cosmos/ibc-go/v3/testing"
 	"github.com/cosmos/ibc-go/v3/testing/mock"

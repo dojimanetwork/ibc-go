@@ -12,9 +12,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/genutil"
 	genutiltest "github.com/cosmos/cosmos-sdk/x/genutil/client/testutil"
+	"github.com/dojimanetwork/dojimamint/libs/log"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/libs/log"
 
 	"github.com/cosmos/ibc-go/v3/testing/simapp"
 	simcmd "github.com/cosmos/ibc-go/v3/testing/simapp/simd/cmd"

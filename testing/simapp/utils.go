@@ -10,7 +10,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/kv"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/dojimanetwork/dojimamint/libs/log"
 	dbm "github.com/tendermint/tm-db"
 
 	"github.com/cosmos/ibc-go/v3/testing/simapp/helpers"

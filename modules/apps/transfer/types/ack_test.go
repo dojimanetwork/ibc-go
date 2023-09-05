@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	abcitypes "github.com/dojimanetwork/dojimamint/abci/types"
+	tmprotostate "github.com/dojimanetwork/dojimamint/proto/dojimamint/state"
+	tmstate "github.com/dojimanetwork/dojimamint/state"
 	"github.com/stretchr/testify/suite"
-	abcitypes "github.com/tendermint/tendermint/abci/types"
-	tmprotostate "github.com/tendermint/tendermint/proto/tendermint/state"
-	tmstate "github.com/tendermint/tendermint/state"
 
 	"github.com/cosmos/ibc-go/v3/modules/apps/transfer/types"
 	ibctesting "github.com/cosmos/ibc-go/v3/testing"

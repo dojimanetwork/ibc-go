@@ -1,6 +1,6 @@
 /*
-	This file contains the variables, constants, and default values
-	used in the testing package and commonly defined in tests.
+This file contains the variables, constants, and default values
+used in the testing package and commonly defined in tests.
 */
 package ibctesting
 
@@ -17,7 +17,7 @@ import (
 )
 
 const (
-	FirstClientID     = "07-tendermint-0"
+	FirstClientID     = "07-dojimamint-0"
 	FirstChannelID    = "channel-0"
 	FirstConnectionID = "connection-0"
 

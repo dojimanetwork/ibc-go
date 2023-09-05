@@ -10,10 +10,10 @@ import (
 	cryptocodec "github.com/cosmos/cosmos-sdk/crypto/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	tmbytes "github.com/dojimanetwork/dojimamint/libs/bytes"
+	tmproto "github.com/dojimanetwork/dojimamint/proto/dojimamint/types"
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 	"github.com/stretchr/testify/suite"
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmtypes "github.com/tendermint/tendermint/types"
 
 	"github.com/cosmos/ibc-go/v3/modules/core/02-client/keeper"
 	"github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
@@ -30,9 +30,9 @@ const (
 	testChainID          = "gaiahub-0"
 	testChainIDRevision1 = "gaiahub-1"
 
-	testClientID  = "tendermint-0"
-	testClientID2 = "tendermint-1"
-	testClientID3 = "tendermint-2"
+	testClientID  = "dojimamint-0"
+	testClientID2 = "dojimamint-1"
+	testClientID3 = "dojimamint-2"
 
 	height = 5
 
@@ -263,7 +263,7 @@ func (suite KeeperTestSuite) TestGetAllGenesisClients() {
 func (suite KeeperTestSuite) TestGetAllGenesisMetadata() {
 	expectedGenMetadata := []types.IdentifiedGenesisMetadata{
 		types.NewIdentifiedGenesisMetadata(
-			"07-tendermint-1",
+			"07-dojimamint-1",
 			[]types.GenesisMetadata{
 				types.NewGenesisMetadata(ibctmtypes.ProcessedTimeKey(types.NewHeight(0, 1)), []byte("foo")),
 				types.NewGenesisMetadata(ibctmtypes.ProcessedTimeKey(types.NewHeight(0, 2)), []byte("bar")),
@@ -280,7 +280,7 @@ func (suite KeeperTestSuite) TestGetAllGenesisMetadata() {
 	}
 
 	genClients := []types.IdentifiedClientState{
-		types.NewIdentifiedClientState("07-tendermint-1", &ibctmtypes.ClientState{}), types.NewIdentifiedClientState("clientB", &ibctmtypes.ClientState{}),
+		types.NewIdentifiedClientState("07-dojimamint-1", &ibctmtypes.ClientState{}), types.NewIdentifiedClientState("clientB", &ibctmtypes.ClientState{}),
 		types.NewIdentifiedClientState("clientC", &ibctmtypes.ClientState{}), types.NewIdentifiedClientState("clientD", &localhosttypes.ClientState{}),
 	}
 

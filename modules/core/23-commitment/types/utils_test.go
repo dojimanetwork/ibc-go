@@ -3,9 +3,9 @@ package types_test
 import (
 	"fmt"
 
+	abci "github.com/dojimanetwork/dojimamint/abci/types"
+	crypto "github.com/dojimanetwork/dojimamint/proto/dojimamint/crypto"
 	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
-	crypto "github.com/tendermint/tendermint/proto/tendermint/crypto"
 
 	"github.com/cosmos/ibc-go/v3/modules/core/23-commitment/types"
 )

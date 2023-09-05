@@ -20,10 +20,10 @@ import (
 // - the upgradedClient is not a Tendermint ClientState
 // - the lastest height of the client state does not have the same revision number or has a greater
 // height than the committed client.
-// - the height of upgraded client is not greater than that of current client
-// - the latest height of the new client does not match or is greater than the height in committed client
-// - any Tendermint chain specified parameter in upgraded client such as ChainID, UnbondingPeriod,
-//   and ProofSpecs do not match parameters set by committed client
+//   - the height of upgraded client is not greater than that of current client
+//   - the latest height of the new client does not match or is greater than the height in committed client
+//   - any Tendermint chain specified parameter in upgraded client such as ChainID, UnbondingPeriod,
+//     and ProofSpecs do not match parameters set by committed client
 func (cs ClientState) VerifyUpgradeAndUpdateState(
 	ctx sdk.Context, cdc codec.BinaryCodec, clientStore sdk.KVStore,
 	upgradedClient exported.ClientState, upgradedConsState exported.ConsensusState,
@@ -41,8 +41,8 @@ func (cs ClientState) VerifyUpgradeAndUpdateState(
 			upgradedClient.GetLatestHeight(), lastHeight)
 	}
 
-	// upgraded client state and consensus state must be IBC tendermint client state and consensus state
-	// this may be modified in the future to upgrade to a new IBC tendermint type
+	// upgraded client state and consensus state must be IBC dojimamint client state and consensus state
+	// this may be modified in the future to upgrade to a new IBC dojimamint type
 	// counterparty must also commit to the upgraded consensus state at a sub-path under the upgrade path specified
 	tmUpgradeClient, ok := upgradedClient.(*ClientState)
 	if !ok {

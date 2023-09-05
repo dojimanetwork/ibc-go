@@ -7,7 +7,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	tmtypes "github.com/tendermint/tendermint/types"
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 
 	clienttypes "github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
 	"github.com/cosmos/ibc-go/v3/modules/core/exported"
@@ -104,12 +104,12 @@ func checkMisbehaviourHeader(
 
 	tmTrustedValset, err := tmtypes.ValidatorSetFromProto(header.TrustedValidators)
 	if err != nil {
-		return sdkerrors.Wrap(err, "trusted validator set is not tendermint validator set type")
+		return sdkerrors.Wrap(err, "trusted validator set is not dojimamint validator set type")
 	}
 
 	tmCommit, err := tmtypes.CommitFromProto(header.Commit)
 	if err != nil {
-		return sdkerrors.Wrap(err, "commit is not tendermint commit type")
+		return sdkerrors.Wrap(err, "commit is not dojimamint commit type")
 	}
 
 	// check the trusted fields for the header against ConsensusState

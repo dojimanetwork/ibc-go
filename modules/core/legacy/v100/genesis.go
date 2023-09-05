@@ -4,7 +4,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 	genutiltypes "github.com/cosmos/cosmos-sdk/x/genutil/types"
-	tmtypes "github.com/tendermint/tendermint/types"
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 
 	clientv100 "github.com/cosmos/ibc-go/v3/modules/core/02-client/legacy/v100"
 	clienttypes "github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
@@ -17,7 +17,7 @@ import (
 //
 // - Update solo machine client state protobuf definition (v1 to v2)
 // - Remove all solo machine consensus states
-// - Remove all expired tendermint consensus states
+// - Remove all expired dojimamint consensus states
 func MigrateGenesis(appState genutiltypes.AppMap, clientCtx client.Context, genDoc tmtypes.GenesisDoc, maxExpectedTimePerBlock uint64) (genutiltypes.AppMap, error) {
 	if appState[host.ModuleName] != nil {
 		// ensure legacy solo machines are registered

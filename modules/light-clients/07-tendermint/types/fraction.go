@@ -1,11 +1,11 @@
 package types
 
 import (
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/light"
+	tmmath "github.com/dojimanetwork/dojimamint/libs/math"
+	"github.com/dojimanetwork/dojimamint/light"
 )
 
-// DefaultTrustLevel is the tendermint light client default trust level
+// DefaultTrustLevel is the dojimamint light client default trust level
 var DefaultTrustLevel = NewFractionFromTm(light.DefaultTrustLevel)
 
 // NewFractionFromTm returns a new Fraction instance from a tmmath.Fraction

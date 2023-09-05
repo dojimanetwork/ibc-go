@@ -5,7 +5,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/dojimanetwork/dojimamint/abci/types"
 
 	clienttypes "github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
 	commitmenttypes "github.com/cosmos/ibc-go/v3/modules/core/23-commitment/types"
@@ -14,7 +14,7 @@ import (
 
 // QueryTendermintProof performs an ABCI query with the given key and returns
 // the value of the query, the proto encoded merkle proof, and the height of
-// the Tendermint block containing the state root. The desired tendermint height
+// the Tendermint block containing the state root. The desired dojimamint height
 // to perform the query should be set in the client context. The query will be
 // performed at one below this height (at the IAVL version) in order to obtain
 // the correct merkle proof. Proof queries at height less than or equal to 2 are
@@ -32,7 +32,7 @@ func QueryTendermintProof(clientCtx client.Context, key []byte) ([]byte, []byte,
 		return nil, nil, clienttypes.Height{}, fmt.Errorf("proof queries at height <= 2 are not supported")
 	}
 
-	// Use the IAVL height if a valid tendermint height is passed in.
+	// Use the IAVL height if a valid dojimamint height is passed in.
 	// A height of 0 will query with the latest state.
 	if height != 0 {
 		height--

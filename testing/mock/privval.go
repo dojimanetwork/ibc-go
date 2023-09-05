@@ -4,9 +4,9 @@ import (
 	cryptocodec "github.com/cosmos/cosmos-sdk/crypto/codec"
 	"github.com/cosmos/cosmos-sdk/crypto/keys/ed25519"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
-	"github.com/tendermint/tendermint/crypto"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmtypes "github.com/tendermint/tendermint/types"
+	"github.com/dojimanetwork/dojimamint/crypto"
+	tmproto "github.com/dojimanetwork/dojimamint/proto/dojimamint/types"
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 )
 
 var _ tmtypes.PrivValidator = PV{}
@@ -15,6 +15,15 @@ var _ tmtypes.PrivValidator = PV{}
 // Only use it for testing.
 type PV struct {
 	PrivKey cryptotypes.PrivKey
+}
+
+func (pv PV) SignSideTxResult(sideTxResult *tmtypes.SideTxResultWithData) error {
+	sig, err := pv.PrivKey.Sign(sideTxResult.GetBytes())
+	if err != nil {
+		return err
+	}
+	sideTxResult.Sig = sig
+	return nil
 }
 
 func NewPV() PV {

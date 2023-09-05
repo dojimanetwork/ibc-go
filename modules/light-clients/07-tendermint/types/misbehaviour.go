@@ -4,8 +4,8 @@ import (
 	"time"
 
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmtypes "github.com/tendermint/tendermint/types"
+	tmproto "github.com/dojimanetwork/dojimamint/proto/dojimamint/types"
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 
 	clienttypes "github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
 	host "github.com/cosmos/ibc-go/v3/modules/core/24-host"
@@ -117,11 +117,11 @@ func (misbehaviour Misbehaviour) ValidateBasic() error {
 func validCommit(chainID string, blockID tmtypes.BlockID, commit *tmproto.Commit, valSet *tmproto.ValidatorSet) (err error) {
 	tmCommit, err := tmtypes.CommitFromProto(commit)
 	if err != nil {
-		return sdkerrors.Wrap(err, "commit is not tendermint commit type")
+		return sdkerrors.Wrap(err, "commit is not dojimamint commit type")
 	}
 	tmValset, err := tmtypes.ValidatorSetFromProto(valSet)
 	if err != nil {
-		return sdkerrors.Wrap(err, "validator set is not tendermint validator set type")
+		return sdkerrors.Wrap(err, "validator set is not dojimamint validator set type")
 	}
 
 	if err := tmValset.VerifyCommitLight(chainID, blockID, tmCommit.Height, tmCommit); err != nil {

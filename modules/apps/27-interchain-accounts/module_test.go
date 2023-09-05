@@ -3,9 +3,9 @@ package ica_test
 import (
 	"testing"
 
+	"github.com/dojimanetwork/dojimamint/libs/log"
+	tmproto "github.com/dojimanetwork/dojimamint/proto/dojimamint/types"
 	"github.com/stretchr/testify/suite"
-	"github.com/tendermint/tendermint/libs/log"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 
 	ica "github.com/cosmos/ibc-go/v3/modules/apps/27-interchain-accounts"

@@ -7,8 +7,8 @@ import (
 
 	ics23 "github.com/confio/ics23/go"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	tmcrypto "github.com/dojimanetwork/dojimamint/proto/dojimamint/crypto"
 	"github.com/gogo/protobuf/proto"
-	tmcrypto "github.com/tendermint/tendermint/proto/tendermint/crypto"
 
 	"github.com/cosmos/ibc-go/v3/modules/core/exported"
 )
@@ -76,7 +76,7 @@ func NewMerklePath(keyPath ...string) MerklePath {
 }
 
 // String implements fmt.Stringer.
-// This represents the path in the same way the tendermint KeyPath will
+// This represents the path in the same way the dojimamint KeyPath will
 // represent a key path. The backslashes partition the key path into
 // the respective stores they belong to.
 func (mp MerklePath) String() string {
