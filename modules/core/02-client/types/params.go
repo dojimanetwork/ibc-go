@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	// DefaultAllowedClients are "06-solomachine" and "07-tendermint"
+	// DefaultAllowedClients are "06-solomachine" and "07-dojimamint"
 	DefaultAllowedClients = []string{exported.Solomachine, exported.Tendermint}
 
 	// KeyAllowedClients is store's key for AllowedClients Params

@@ -3,7 +3,7 @@ package types_test
 import (
 	"time"
 
-	tmprotocrypto "github.com/tendermint/tendermint/proto/tendermint/crypto"
+	tmprotocrypto "github.com/dojimanetwork/dojimamint/proto/dojimamint/crypto"
 
 	clienttypes "github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
 	"github.com/cosmos/ibc-go/v3/modules/core/exported"
@@ -39,7 +39,7 @@ func (suite *TendermintTestSuite) TestHeaderValidateBasic() {
 		{"SignedHeaderFromProto failed", func() {
 			header.SignedHeader.Commit.Height = -1
 		}, false},
-		{"signed header failed tendermint ValidateBasic", func() {
+		{"signed header failed dojimamint ValidateBasic", func() {
 			header = suite.chainA.LastHeader
 			header.SignedHeader.Commit = nil
 		}, false},

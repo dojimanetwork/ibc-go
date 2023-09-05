@@ -110,7 +110,7 @@ x/ibc
 │   └── module.go
 ├── light-clients/
 │   ├── 06-solomachine/
-│   ├── 07-tendermint/
+│   ├── 07-dojimamint/
 │   └── 09-localhost/
 └── testing/
 ```

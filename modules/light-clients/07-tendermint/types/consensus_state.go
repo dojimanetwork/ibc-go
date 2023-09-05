@@ -4,8 +4,8 @@ import (
 	"time"
 
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	tmtypes "github.com/tendermint/tendermint/types"
+	tmbytes "github.com/dojimanetwork/dojimamint/libs/bytes"
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 
 	clienttypes "github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
 	commitmenttypes "github.com/cosmos/ibc-go/v3/modules/core/23-commitment/types"
@@ -41,7 +41,7 @@ func (cs ConsensusState) GetTimestamp() uint64 {
 	return uint64(cs.Timestamp.UnixNano())
 }
 
-// ValidateBasic defines a basic validation for the tendermint consensus state.
+// ValidateBasic defines a basic validation for the dojimamint consensus state.
 // NOTE: ProcessedTimestamp may be zero if this is an initial consensus state passed in by relayer
 // as opposed to a consensus state constructed by the chain.
 func (cs ConsensusState) ValidateBasic() error {

@@ -6,7 +6,7 @@ import (
 	"time"
 
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
-	tmtypes "github.com/tendermint/tendermint/types"
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 
 	"github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
 	clienttypes "github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
@@ -364,7 +364,7 @@ func (suite *KeeperTestSuite) TestUpgradeClient() {
 			expPass: false,
 		},
 		{
-			name: "tendermint client VerifyUpgrade fails",
+			name: "dojimamint client VerifyUpgrade fails",
 			setup: func() {
 				// last Height is at next block
 				lastHeight = clienttypes.NewHeight(0, uint64(suite.chainB.GetContext().BlockHeight()+1))

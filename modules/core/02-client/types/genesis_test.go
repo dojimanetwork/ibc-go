@@ -3,7 +3,7 @@ package types_test
 import (
 	"time"
 
-	tmtypes "github.com/tendermint/tendermint/types"
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 
 	client "github.com/cosmos/ibc-go/v3/modules/core/02-client"
 	"github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
@@ -17,8 +17,8 @@ import (
 
 const (
 	chainID         = "chainID"
-	tmClientID0     = "07-tendermint-0"
-	tmClientID1     = "07-tendermint-1"
+	tmClientID0     = "07-dojimamint-0"
+	tmClientID1     = "07-dojimamint-1"
 	invalidClientID = "myclient-0"
 	clientID        = tmClientID0
 

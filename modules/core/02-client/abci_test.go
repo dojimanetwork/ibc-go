@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
+	abci "github.com/dojimanetwork/dojimamint/abci/types"
+	tmproto "github.com/dojimanetwork/dojimamint/proto/dojimamint/types"
 	"github.com/stretchr/testify/suite"
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
 	client "github.com/cosmos/ibc-go/v3/modules/core/02-client"
 	"github.com/cosmos/ibc-go/v3/modules/core/02-client/types"

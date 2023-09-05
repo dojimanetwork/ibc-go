@@ -30,7 +30,7 @@ func (suite *TypesTestSuite) TestPackClientState() {
 			true,
 		},
 		{
-			"tendermint client",
+			"dojimamint client",
 			ibctmtypes.NewClientState(chainID, ibctesting.DefaultTrustLevel, ibctesting.TrustingPeriod, ibctesting.UnbondingPeriod, ibctesting.MaxClockDrift, clientHeight, commitmenttypes.GetSDKSpecs(), ibctesting.UpgradePath, false, false),
 			true,
 		},
@@ -82,7 +82,7 @@ func (suite *TypesTestSuite) TestPackConsensusState() {
 			true,
 		},
 		{
-			"tendermint consensus",
+			"dojimamint consensus",
 			suite.chainA.LastHeader.ConsensusState(),
 			true,
 		},
@@ -128,7 +128,7 @@ func (suite *TypesTestSuite) TestPackHeader() {
 			true,
 		},
 		{
-			"tendermint header",
+			"dojimamint header",
 			suite.chainA.LastHeader,
 			true,
 		},
@@ -175,8 +175,8 @@ func (suite *TypesTestSuite) TestPackMisbehaviour() {
 			true,
 		},
 		{
-			"tendermint misbehaviour",
-			ibctmtypes.NewMisbehaviour("tendermint", suite.chainA.LastHeader, suite.chainA.LastHeader),
+			"dojimamint misbehaviour",
+			ibctmtypes.NewMisbehaviour("dojimamint", suite.chainA.LastHeader, suite.chainA.LastHeader),
 			true,
 		},
 		{

@@ -6,7 +6,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	tmtypes "github.com/tendermint/tendermint/types"
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 
 	"github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
 	commitmenttypes "github.com/cosmos/ibc-go/v3/modules/core/23-commitment/types"
@@ -118,7 +118,7 @@ func QueryConsensusStateABCI(
 }
 
 // QueryTendermintHeader takes a client context and returns the appropriate
-// tendermint header
+// dojimamint header
 func QueryTendermintHeader(clientCtx client.Context) (ibctmtypes.Header, int64, error) {
 	node, err := clientCtx.GetNode()
 	if err != nil {
@@ -165,7 +165,7 @@ func QueryTendermintHeader(clientCtx client.Context) (ibctmtypes.Header, int64, 
 }
 
 // QuerySelfConsensusState takes a client context and returns the appropriate
-// tendermint consensus state
+// dojimamint consensus state
 func QuerySelfConsensusState(clientCtx client.Context) (*ibctmtypes.ConsensusState, int64, error) {
 	node, err := clientCtx.GetNode()
 	if err != nil {

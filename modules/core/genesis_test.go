@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/cosmos/cosmos-sdk/codec"
+	tmproto "github.com/dojimanetwork/dojimamint/proto/dojimamint/types"
 	"github.com/stretchr/testify/suite"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
 	ibc "github.com/cosmos/ibc-go/v3/modules/core"
 	clienttypes "github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
@@ -23,7 +23,7 @@ import (
 
 const (
 	connectionID  = "connection-0"
-	clientID      = "07-tendermint-0"
+	clientID      = "07-dojimamint-0"
 	connectionID2 = "connection-1"
 	clientID2     = "07-tendermin-1"
 	localhostID   = exported.Localhost + "-1"

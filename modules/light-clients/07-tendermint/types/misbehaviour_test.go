@@ -3,9 +3,9 @@ package types_test
 import (
 	"time"
 
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmtypes "github.com/tendermint/tendermint/types"
+	"github.com/dojimanetwork/dojimamint/crypto/tmhash"
+	tmproto "github.com/dojimanetwork/dojimamint/proto/dojimamint/types"
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 
 	clienttypes "github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
 	"github.com/cosmos/ibc-go/v3/modules/core/exported"

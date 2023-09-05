@@ -6,8 +6,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	genutiltypes "github.com/cosmos/cosmos-sdk/x/genutil/types"
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 	"github.com/stretchr/testify/suite"
-	tmtypes "github.com/tendermint/tendermint/types"
 
 	ibcclient "github.com/cosmos/ibc-go/v3/modules/core/02-client"
 	clientv100 "github.com/cosmos/ibc-go/v3/modules/core/02-client/legacy/v100"
@@ -58,7 +58,7 @@ func (suite *LegacyTestSuite) TestMigrateGenesisSolomachine() {
 	solomachine := ibctesting.NewSolomachine(suite.T(), suite.chainA.Codec, "06-solomachine-0", "testing", 1)
 	solomachineMulti := ibctesting.NewSolomachine(suite.T(), suite.chainA.Codec, "06-solomachine-1", "testing", 4)
 
-	// create tendermint clients
+	// create dojimamint clients
 	// NOTE: only 1 set of metadata is created, we aren't testing ordering
 	// The purpose of this test is to ensure the genesis states can be marshalled/unmarshalled
 	suite.coordinator.SetupClients(path)
@@ -140,7 +140,7 @@ func (suite *LegacyTestSuite) TestMigrateGenesisSolomachine() {
 		clientStore.Set(host.ConsensusStateKey(height2), bz)
 		clientStore.Set(host.ConsensusStateKey(height3), bz)
 	}
-	// solo machine clients must come before tendermint in expected
+	// solo machine clients must come before dojimamint in expected
 	clientGenState.Clients = append(clients, clientGenState.Clients...)
 
 	// migrate store get expected genesis
@@ -162,7 +162,7 @@ func (suite *LegacyTestSuite) TestMigrateGenesisSolomachine() {
 		InitialHeight: suite.chainA.GetContext().BlockHeight(),
 	}
 
-	// NOTE: genesis time isn't updated since we aren't testing for tendermint consensus state pruning
+	// NOTE: genesis time isn't updated since we aren't testing for dojimamint consensus state pruning
 	migrated, err := v100.MigrateGenesis(appState, clientCtx, genDoc, uint64(connectiontypes.DefaultTimePerBlock))
 	suite.Require().NoError(err)
 

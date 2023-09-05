@@ -215,7 +215,7 @@ Here is a basic example of the testing package being used to simulate IBC functi
 ```go
     path := ibctesting.NewPath(suite.chainA, suite.chainB) // clientID, connectionID, channelID empty
     suite.coordinator.Setup(path) // clientID, connectionID, channelID filled
-    suite.Require().Equal("07-tendermint-0", path.EndpointA.ClientID)
+    suite.Require().Equal("07-dojimamint-0", path.EndpointA.ClientID)
     suite.Require().Equal("connection-0", path.EndpointA.ClientID)
     suite.Require().Equal("channel-0", path.EndpointA.ClientID)
 
@@ -252,11 +252,11 @@ package transfertesting
 import (
 	"encoding/json"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/dojimanetwork/dojimamint/libs/log"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/cosmos/ibc-go/v3/modules/apps/transfer/simapp"
-	ibctesting "github.com/cosmos/ibc-go/v3/testing"
+	"github.com/dojimanetwork/ibc-go/v3/modules/apps/transfer/simapp"
+	ibctesting "github.com/dojimanetwork/ibc-go/v3/testing"
 )
 
 func SetupTransferTestingApp() (ibctesting.TestingApp, map[string]json.RawMessage) {

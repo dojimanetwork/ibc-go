@@ -3,9 +3,9 @@ package mock_test
 import (
 	"testing"
 
+	tmproto "github.com/dojimanetwork/dojimamint/proto/dojimamint/types"
+	tmtypes "github.com/dojimanetwork/dojimamint/types"
 	"github.com/stretchr/testify/require"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmtypes "github.com/tendermint/tendermint/types"
 
 	"github.com/cosmos/ibc-go/v3/testing/mock"
 )

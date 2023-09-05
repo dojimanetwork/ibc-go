@@ -8,8 +8,8 @@ import (
 	capabilitykeeper "github.com/cosmos/cosmos-sdk/x/capability/keeper"
 	capabilitytypes "github.com/cosmos/cosmos-sdk/x/capability/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	"github.com/tendermint/tendermint/libs/log"
+	tmbytes "github.com/dojimanetwork/dojimamint/libs/bytes"
+	"github.com/dojimanetwork/dojimamint/libs/log"
 
 	"github.com/cosmos/ibc-go/v3/modules/apps/transfer/types"
 	host "github.com/cosmos/ibc-go/v3/modules/core/24-host"

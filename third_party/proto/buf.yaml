@@ -14,7 +14,7 @@ breaking:
     - proofs.proto # confio/ics23
     - gogoproto
     - google
-    - tendermint
+    - dojimamint
 lint:
   use:
     - DEFAULT
@@ -30,4 +30,4 @@ lint:
     - proofs.proto # confio/ics23
     - gogoproto
     - google
-    - tendermint
+    - dojimamint
